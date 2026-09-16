@@ -10,12 +10,12 @@ source lives separately.
 
 ## Download
 
-Latest release: **[v0.1.0 — first beta](https://github.com/mrsarthi/EchoIt-Messenger/releases/latest)**
+Latest release: **[v0.4.0 — beta](https://github.com/mrsarthi/EchoIt-Messenger/releases/latest)**
 
 | Platform | File |
 | :--- | :--- |
-| **Windows** | `EchoIt_0.1.0_x64-setup.exe` (installer), or the `.msi` |
-| **Android** | `EchoIt_0.1.0_android_aarch64.apk` — 64-bit ARM, which is nearly every phone made since about 2018 |
+| **Windows** | `EchoIt_0.4.0_x64-setup.exe` (installer), or the `.msi` |
+| **Android** | `EchoIt_0.4.0_android_aarch64.apk` — 64-bit ARM, which is nearly every phone made since about 2018 |
 
 On Android you will need to allow installing from an unknown source. The build
 is signed, so later updates install over the top and keep your messages.
