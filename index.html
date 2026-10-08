@@ -101,6 +101,7 @@
     <!-- Scripts -->
     <script src="canvas.js" defer></script>
     <script src="simulator.js" defer></script>
+    <script src="download-links.js" defer></script>
 </head>
 <body class="bg-background text-on-background selection:bg-primary selection:text-background font-body">
 
@@ -142,7 +143,7 @@
                     </p>
                     
                     <div class="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-4 mt-8 w-full sm:w-auto lg:w-full" id="download">
-                        <a id="btn-android" href="https://github.com/mrsarthi/EchoIt-Messenger/releases/latest/download/echoit.apk" class="btn btn-primary btn-icon w-full justify-center" download>
+                        <a id="btn-android" href="https://github.com/mrsarthi/EchoIt-Messenger/releases/download/v0.4.0/EchoIt_0.4.0_aarch64.apk" class="btn btn-primary btn-icon w-full justify-center" download>
                             <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                                 <path d="M5 16s0-5 7-5 7 5 7 5"/>
                                 <path d="M12 11V2"/>
@@ -169,7 +170,7 @@
                          out from a message that never arrives. -->
                     <div class="mt-6 w-full border border-zinc-border/60 rounded-lg bg-surface/40 p-4 text-left">
                         <div class="flex items-center gap-2 mb-2">
-                            <span class="font-mono text-[10px] uppercase tracking-wider text-primary font-bold">Beta &middot; v0.1.0</span>
+                            <span class="font-mono text-[10px] uppercase tracking-wider text-primary font-bold">Beta &middot; <span id="release-version">v0.4.0</span></span>
                             <span class="font-mono text-[10px] text-zinc-muted">Windows &amp; Android</span>
                         </div>
                         <p class="font-body text-xs text-zinc-muted leading-relaxed">
