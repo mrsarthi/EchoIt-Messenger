@@ -10,12 +10,12 @@ source lives separately.
 
 ## Download
 
-Latest release: **[v0.4.0 — beta](https://github.com/mrsarthi/EchoIt-Messenger/releases/latest)**
+Latest release: **[v0.6.3 — beta](https://github.com/mrsarthi/EchoIt-Messenger/releases/latest)**
 
 | Platform | File |
 | :--- | :--- |
-| **Windows** | `EchoIt_0.4.0_x64-setup.exe` (installer), or the `.msi` |
-| **Android** | `EchoIt_0.4.0_android_aarch64.apk` — 64-bit ARM, which is nearly every phone made since about 2018 |
+| **Windows** | `EchoIt_0.6.3_x64-setup.exe` — or update from **Settings** in the app |
+| **Android** | `EchoIt_0.6.3_aarch64.apk` — 64-bit ARM, which is nearly every phone made since about 2018 |
 
 On Android you will need to allow installing from an unknown source. The build
 is signed, so later updates install over the top and keep your messages.
@@ -32,20 +32,44 @@ recovery phrase that only you hold.
 Messages travel directly between the two devices in a conversation, encrypted
 end to end. **No server stores your message history.**
 
-### Adding someone takes both people
+### Connecting with someone
 
-You add their connection ticket, they add yours. Until both halves are done
-nothing can be delivered — and the app tells you which state you are in rather
-than pretending otherwise.
+Share your connection ticket from the Profile tab. When your friend adds it,
+you get a request showing the name they chose — tap **Accept** and you are
+connected. If you both add each other's tickets, that works too.
 
-One consequence worth knowing: **whoever adds second can message first.** The
-other side's message box unlocks when the first message arrives.
+### Messages
+
+Replies, reactions, read receipts and typing indicators, one-to-one. On the
+desktop app, hover over a message for **Reply** and **React**, or right-click it.
+
+**When messages arrive:** messages arrive while EchoIt is in use on your phone;
+otherwise the next time both phones are. A message waits on your device —
+marked as not yet delivered — until then. Nothing is lost along the way.
+
+### Files of any size
+
+Photos, videos and documents go directly from your device to your friend's,
+with no size limit. What to expect:
+
+- **Before a large file can be sent** it is prepared on your device; the bar at
+  the top shows how far along it is, and Cancel stops it. You need about the
+  file's size free.
+- **Your friend downloads it by tapping it.** Keep EchoIt open on your device
+  until they have it — your device is the only place it comes from.
+- **If a download stalls** (your device went to sleep, say), it says so, pauses,
+  and carries on from where it stopped when you are both back.
+- **Once they have it, EchoIt deletes its copy on your device.** Your original
+  file is untouched. If they never download it, EchoIt lets go after 15 days.
+- **Videos play straight away**, however large. Saving a video to your device
+  moves it out of EchoIt rather than keeping it twice; pictures stay in the
+  chat.
 
 ### Blocking
 
 Blocking is local to your device. A blocked peer's messages are discarded on
-arrival, and they are never told. Note that blocking does not undo anything they
-sent you before.
+arrival, and they are never told. Blocking does not undo anything they sent you
+before.
 
 ---
 
@@ -53,34 +77,32 @@ sent you before.
 
 Stated plainly, because finding out later is worse:
 
-- **Messages move while both apps are open.** If your friend's phone is asleep
-  in a pocket, your message waits rather than arriving. Delivery to a
-  backgrounded phone is not built yet.
-- **Your chat history is not encrypted on disk.** Someone with access to an
-  unlocked device could read it. Keep a lock screen or password on.
-- **No groups, no read receipts, no delivery ticks, no typing indicators.**
-- **If setup fails there is no in-app way to start over.** Unlikely, but if you
-  get stuck at the setup screen please report it rather than fighting it.
+- **Nothing arrives while a phone is locked or asleep.** Android stops EchoIt
+  then; messages and files wait until both phones are in use.
+- **What you write is encrypted on your device, but not who you talked to or
+  when.** Keep a lock screen or password on.
+- **One-to-one only** — no groups yet.
+- **Sending files from a phone** has had less testing than from a computer. If
+  something misbehaves, please say so.
 
 ---
 
 ## About the connection
 
-Two phones have no fixed address, so something has to introduce them. EchoIt
-uses a **connection helper** for that. It learns your device's public key, your
-IP address and roughly when you are online, and it **cannot read your
-messages**. Once the introduction is made, messages go straight between the two
-devices. If a direct path cannot be established the helper passes the encrypted
-messages along instead — still unable to read them.
+> **"Phones move around and have no fixed address, so EchoIt uses a helper to
+> introduce your device to your friend's. After that, your messages go straight
+> from your phone to theirs. If the two phones can't reach each other directly,
+> the helper passes the messages along still sealed — it cannot open them. The
+> only other server EchoIt talks to is the one it asks whether there's a new
+> version."**
 
-In this release that helper is the public infrastructure operated by
-[Number 0](https://n0.computer), who make the networking library EchoIt is built
-on. We do not run it and receive nothing from it, which also means we cannot
-make promises about what it keeps. Running our own is planned.
+A helper can tell that a device is online and roughly where it is connecting
+from. It cannot read a word of what it carries, and it never holds anything.
+Files travel the same way, still sealed.
 
-EchoIt also asks GitHub once a day whether a newer version is available. That
-request carries nothing about you or your conversations, though GitHub can see
-an IP address and roughly when the app was opened. You can turn it off in
+The update check asks GitHub once a day whether a newer version is available.
+That request carries nothing about you or your conversations, though GitHub can
+see an IP address and roughly when the app was opened. You can turn it off in
 Settings and check for new versions yourself.
 
 ---
@@ -97,5 +119,5 @@ phrase, that identity is gone.
 ## Reporting problems
 
 Please include what you did, what you expected, and what happened. If a message
-did not arrive, say whether **both apps were open at the time** — that single
-detail is the most useful thing in a report.
+or file did not arrive, say whether **both apps were open at the time** — that
+single detail is the most useful thing in a report.
