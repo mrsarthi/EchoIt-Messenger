@@ -10,12 +10,12 @@ source lives separately.
 
 ## Download
 
-Latest release: **[v0.6.4 — beta](https://github.com/mrsarthi/EchoIt-Messenger/releases/latest)**
+Latest release: **[v0.7.0 — beta](https://github.com/mrsarthi/EchoIt-Messenger/releases/latest)**
 
 | Platform | File |
 | :--- | :--- |
-| **Windows** | `EchoIt_0.6.4_x64-setup.exe` — or update from **Settings** in the app |
-| **Android** | `EchoIt_0.6.4_aarch64.apk` — 64-bit ARM, which is nearly every phone made since about 2018 |
+| **Windows** | `EchoIt_0.7.0_x64-setup.exe` — or update from **Settings** in the app |
+| **Android** | `EchoIt_0.7.0_aarch64.apk` — 64-bit ARM, which is nearly every phone made since about 2018 |
 
 On Android you will need to allow installing from an unknown source. The build
 is signed, so later updates install over the top and keep your messages.
@@ -41,7 +41,15 @@ connected. If you both add each other's tickets, that works too.
 ### Messages
 
 Replies, reactions, read receipts and typing indicators, one-to-one. On the
-desktop app, hover over a message for **Reply** and **React**, or right-click it.
+desktop app, hover over a message for **Reply** and **React**.
+
+Long-press a message (right-click it on the desktop) to choose it: a bar takes
+the place of the chat's header with **Reply**, **Forward**, **Copy**,
+**Select all** and **Delete**. Delete removes messages from your device only —
+your friend keeps their copy.
+
+The app icon shows how many chats have something unread: on the Windows
+taskbar, and on Android as a number or a dot, depending on the phone.
 
 **When messages arrive:** messages arrive while EchoIt is in use on your phone;
 otherwise the next time both phones are. A message waits on your device —
@@ -52,24 +60,40 @@ marked as not yet delivered — until then. Nothing is lost along the way.
 Photos, videos and documents go directly from your device to your friend's,
 with no size limit. What to expect:
 
-- **Before a large file can be sent** it is prepared on your device; the bar at
-  the top shows how far along it is, and Cancel stops it. You need about the
-  file's size free.
-- **Your friend downloads it by tapping it.** Keep EchoIt open on your device
-  until they have it — your device is the only place it comes from.
+- **On a computer, a file is sent from where it is** — nothing is copied, so
+  even a large video starts straight away. If you move, change or delete it
+  before your friend has it, EchoIt tells you both, and you can send it again.
+- **On a phone, a file is copied into EchoIt first**; the bar at the top shows
+  how far along it is, and Cancel stops it. You need about the file's size
+  free.
+- **Your friend sees a preview straight away** — a blurred picture of a photo
+  or video — and **downloads it by tapping it**. Keep EchoIt open on your
+  device until they have it — your device is the only place it comes from.
+- **Progress shows on the file itself.** Tap it to stop a download, and again
+  to carry on from where it stopped.
 - **If a download stalls** (your device went to sleep, say), it says so, pauses,
   and carries on from where it stopped when you are both back.
-- **Once they have it, EchoIt deletes its copy on your device.** Your original
-  file is untouched. If they never download it, EchoIt lets go after 15 days.
+- **Once they have it, EchoIt lets go of the file on your device.** Your
+  original file is untouched. If they never download it, EchoIt lets go after
+  15 days.
 - **Videos play straight away**, however large. Saving a video to your device
   moves it out of EchoIt rather than keeping it twice; pictures stay in the
   chat.
+- **No sound?** Some videos carry their sound in a format EchoIt's player
+  can't play (often films with 5.1 sound). EchoIt notices and offers **Open in
+  another player** — VLC, PotPlayer, or whatever your device uses for videos.
 
 ### Blocking
 
 Blocking is local to your device. A blocked peer's messages are discarded on
 arrival, and they are never told. Blocking does not undo anything they sent you
 before.
+
+### Removing a contact
+
+From a contact's **⋮** menu, or from their profile. They are removed from your
+device only, and they are not told. You can also delete your chat with them —
+from your device; theirs stays. To talk again, add them with their ticket.
 
 ---
 
@@ -84,6 +108,10 @@ Stated plainly, because finding out later is worse:
 - **One-to-one only** — no groups yet.
 - **Sending files from a phone** has had less testing than from a computer. If
   something misbehaves, please say so.
+- **Someone you removed may still see you as online** while you both have
+  EchoIt open.
+- **Update both sides.** Someone still on 0.6.x sees each photo or video you
+  send with a small extra picture beside it — the preview.
 
 ---
 
