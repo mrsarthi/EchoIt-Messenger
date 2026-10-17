@@ -1,0 +1,4 @@
+# Raw screen recordings never belong in the website repo.
+*.mp4
+*.webm
+*.mov

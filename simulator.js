@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (legalView) legalView.classList.add('hidden');
         
         // Revert Navigation Styles
-        linkNetwork.className = "text-zinc-muted font-medium hover:text-primary transition-colors duration-200 font-mono text-xs uppercase tracking-wider";
+        if (linkNetwork) linkNetwork.className = "text-zinc-muted font-medium hover:text-primary transition-colors duration-200 font-mono text-xs uppercase tracking-wider";
         [linkFeatures, linkPreview, linkProtocol].forEach(link => {
             link.className = "text-zinc-muted font-medium hover:text-primary transition-colors duration-200 font-mono text-xs uppercase tracking-wider";
         });
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (tabName === 'dashboard') {
             dashboardView.classList.remove('hidden');
             // Update Active Navigation Styles
-            linkNetwork.className = "text-primary font-bold border-b-2 border-primary pb-1 font-mono text-xs uppercase tracking-wider";
+            if (linkNetwork) linkNetwork.className = "text-primary font-bold border-b-2 border-primary pb-1 font-mono text-xs uppercase tracking-wider";
             window.scrollTo({ top: 0, behavior: 'instant' });
         } else if (tabName === 'legal-privacy') {
             if (legalView) {
@@ -69,9 +69,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function handleRouting() {
         const hash = window.location.hash;
-        if (hash === '#network') {
-            switchToTab('dashboard');
-        } else if (hash === '#legal-privacy') {
+        // '#network' used to open an invented "network status" dashboard; it
+        // now falls through to the landing page.
+        if (hash === '#legal-privacy') {
             switchToTab('legal-privacy');
         } else if (hash === '#legal-terms') {
             switchToTab('legal-terms');
@@ -92,12 +92,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Direct Click Interceptors to prevent double scroll jumps
-    linkNetwork.addEventListener('click', (e) => {
+    if (linkNetwork) linkNetwork.addEventListener('click', (e) => {
         e.preventDefault();
         window.location.hash = 'network';
     });
 
-    footerNetLink.addEventListener('click', (e) => {
+    if (footerNetLink) footerNetLink.addEventListener('click', (e) => {
         e.preventDefault();
         window.location.hash = 'network';
     });

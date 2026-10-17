@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EchoIt Privacy Policy</title>
+  <meta name="description" content="What EchoIt keeps, what leaves your device, and who can see it — in plain words.">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="stylesheet" href="legal.css">
+</head>
+<body>
+<main>
+  <header>
+    <nav>
+      <a href="./">EchoIt home</a>
+      <a href="privacy.html" aria-current="page">Privacy Policy</a>
+      <a href="terms.html">Terms of Use</a>
+    </nav>
+    <h1>Privacy Policy</h1>
+    <p class="meta">Version 1 · In effect from 17 October 2026 · Applies to EchoIt 0.7.1 and later</p>
+  </header>
+
+  <section class="short">
+    <h2>The short version</h2>
+    <ul>
+      <li>EchoIt has <strong>no accounts</strong>. We never ask for your phone number, email or real name.</li>
+      <li>Your messages, contacts and files are kept <strong>on your device</strong>, with the words of your
+        messages encrypted. We have no copy and cannot read them.</li>
+      <li><strong>Who you talked to and when is not encrypted</strong> on your device. Keep a lock screen on.</li>
+      <li><strong>There is no backup.</strong> If you lose your device or uninstall EchoIt, your history is
+        gone; your recovery phrase brings back who you are, not your messages.</li>
+      <li>The people you talk to receive what you send, your name and picture, and <strong>when you are
+        online, typing, or have read their messages</strong>. These can't be hidden yet.</li>
+      <li>To find your friend's device, EchoIt uses a <strong>connection helper</strong> and an
+        <strong>address directory</strong>, run by Number&nbsp;0 (until mid-November 2026 the helper is
+        <a href="#own-helper">ours</a>). They see your device's internet address and when it is online, never
+        your messages. EchoIt also asks GitHub once a day for updates; you can turn that off.</li>
+      <li>No ads, no tracking, no analytics. We don't collect or sell anything about you.</li>
+      <li>Not for children under 13. EchoIt is a <strong>beta</strong> — read the <a href="#beta">beta section</a>
+        before you rely on it.</li>
+    </ul>
+  </section>
+
+  <h2>Who we are</h2>
+  <p>
+    EchoIt is made by Parth Sarthi Mishra, an independent developer in India. "We" and "us" on
+    this page mean that developer. To ask anything about privacy, write to
+    <a href="mailto:wforsarthi@gmail.com">wforsarthi@gmail.com</a>.
+  </p>
+
+  <h2>What stays on your device</h2>
+  <p>Everything you make in EchoIt lives on the device you made it on:</p>
+  <ul>
+    <li>your messages, reactions and replies</li>
+    <li>photos, videos and files you send or receive</li>
+    <li>your contacts, their names and pictures</li>
+    <li>your name, your picture and your recovery phrase</li>
+  </ul>
+  <p>
+    <strong>The words of your messages and your files are encrypted on your device</strong>, with a
+    key kept in your device's secure storage. Someone who copies EchoIt's files off your device cannot read them.
+    A file you save out of EchoIt — to your Downloads folder, say — becomes an ordinary file on your device,
+    and the files you send stay where they were, as they were.
+  </p>
+  <p>
+    <strong>Who you talked to and when is not encrypted on your device.</strong> Someone with access to
+    your device's files could see that you had a conversation, with whom, and when — but not what was said.
+    And anyone holding your <em>unlocked</em> device can simply open EchoIt. A lock screen PIN or password is
+    what protects you here.
+  </p>
+  <p>
+    There is no copy anywhere else, so <strong>nobody can restore your history for you</strong> — not us,
+    not anyone. Your twelve-word recovery phrase brings back who you are on a new device, not your messages.
+  </p>
+
+  <h2>What the people you talk to receive</h2>
+  <p>When you add someone and they accept, their device receives from yours:</p>
+  <ul>
+    <li>what you send them — messages, reactions, photos, videos and files</li>
+    <li>the name and picture you chose, and any change to them</li>
+    <li>when you are online, when you are typing, and when you have read their messages</li>
+  </ul>
+  <p>
+    There is no setting to hide your online status, typing or read receipts yet.
+    What you send is theirs to keep: <strong>deleting a message, a chat or a contact only removes it from
+    your device</strong>. Removing or blocking someone happens on your device only, and they are not told.
+  </p>
+
+  <h2>What leaves your device, and who can see it</h2>
+  <p>
+    Phones and computers have no fixed address on the internet, so EchoIt needs some help to find
+    your friend's device. This is everything EchoIt sends to a server, and what that server can see:
+  </p>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Service</th><th>Why EchoIt uses it</th><th>What it can see</th><th>Who runs it</th></tr></thead>
+    <tbody>
+      <tr>
+        <td data-label="Service"><strong>The connection helper</strong></td>
+        <td data-label="Why EchoIt uses it">
+          While EchoIt is open, your device stays in touch with the helper, which introduces it to your
+          friend's. Most of the time your messages then go straight between the two devices. If they
+          can't reach each other directly, the helper passes your messages and files along — still sealed.
+        </td>
+        <td data-label="What it can see">
+          Your device's ID, its internet (IP) address, when it is online, and how much it sends through the
+          helper. It <strong>cannot read</strong> anything it passes along, and it <strong>does not store</strong>
+          messages: a message for someone who is offline is not kept there. It waits on your device instead.
+          Number&nbsp;0 says it watches its helpers for abuse; it does not say what it keeps, or for how long.
+        </td>
+        <td data-label="Who runs it">
+          <strong>Number&nbsp;0</strong>, the company that makes the networking software EchoIt is built on.
+          We don't run it and receive nothing from it. <strong>Until mid-November 2026, EchoIt uses ours
+          instead</strong> — see <a href="#own-helper">below</a>. If you'd rather use neither, you can point
+          EchoIt at a helper you run yourself, in <strong>Settings → Connecting</strong>.
+        </td>
+      </tr>
+      <tr>
+        <td data-label="Service"><strong>The address directory</strong></td>
+        <td data-label="Why EchoIt uses it">
+          Each time EchoIt opens, it publishes where your device can currently be reached, so your
+          contacts' devices can find it.
+        </td>
+        <td data-label="What it can see">
+          Your device's ID and which connection helper it uses. Like any website, it also sees your internet
+          address each time EchoIt publishes. Number&nbsp;0 does not say what it keeps, or for how long.
+        </td>
+        <td data-label="Who runs it">
+          <strong>Number&nbsp;0</strong>, the company that makes the networking software EchoIt is built on.
+          We don't run it and receive nothing from it. It cannot be turned off yet.
+        </td>
+      </tr>
+      <tr>
+        <td data-label="Service"><strong>The update check</strong></td>
+        <td data-label="Why EchoIt uses it">Once a day, EchoIt asks whether a newer version exists. Updates are downloaded from the same place.</td>
+        <td data-label="What it can see">
+          Nothing about you or your conversations — but like any website, it sees your internet address
+          and roughly when the app was opened.
+        </td>
+        <td data-label="Who runs it">
+          <strong>GitHub</strong>. You can turn the check off in <strong>Settings → Updates</strong>.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <p>
+    We have <strong>not</strong> tested whether the helper or the directory could work out <em>which two
+    devices</em> are talking to each other, so we do not promise that they can't.
+  </p>
+  <p>
+    Your device's ID is a code created on your device. It is not your name or your phone number.
+  </p>
+  <h3 id="own-helper">Our own helper, until mid-November 2026</h3>
+  <p>
+    Until then, EchoIt uses a connection helper we run ourselves, on Amazon Web Services in Mumbai — the one
+    EchoIt 0.7.0 and earlier use, so that people who haven't updated can still be reached. EchoIt switches to
+    Number&nbsp;0's helper only if ours doesn't answer when the app opens. Ours sees the same kind of
+    information as Number&nbsp;0's and cannot read anything either. It may keep records of connections —
+    a device's internet address, its device code, and the time — until we switch it off in mid-November
+    2026, when everything on it is deleted. After that, EchoIt uses Number&nbsp;0's helper, and EchoIt 0.7.0 and earlier will no longer be able to
+    connect — please update.
+  </p>
+
+  <h2>What EchoIt does not do</h2>
+  <ul>
+    <li>No ads, no analytics, no tracking, and no crash reports sent anywhere.</li>
+    <li>No access to your phone's contacts, location, camera or microphone.</li>
+    <li>Notifications are made on your device. A message notification shows only who it is from — not what it says.</li>
+    <li>We do not sell, share or rent anything about you. We have nothing about you to sell.</li>
+  </ul>
+
+  <h2>What EchoIt asks your phone for</h2>
+  <ul>
+    <li><strong>Notifications</strong> — to tell you about new messages and files.</li>
+    <li><strong>Running while open</strong> — Android shows a notification that EchoIt is running, so it can keep receiving while you use your phone.</li>
+    <li><strong>Files you choose</strong> — only the file you pick when you send one, and the place you choose when you save one.</li>
+  </ul>
+
+  <h2>This website</h2>
+  <p>
+    This website is hosted by GitHub Pages, so GitHub sees visits to it. Its fonts, styles and pictures are
+    served from the site itself; the only other thing the main page asks for is the latest download links,
+    from GitHub. We use no cookies and no analytics, and we don't receive any of that information.
+  </p>
+
+  <h2>Your choices and rights</h2>
+  <ul>
+    <li><strong>See or copy your data:</strong> it is all on your device, in EchoIt.</li>
+    <li><strong>Delete your data:</strong> Settings → Reset removes everything from this device; uninstalling does too. Your contacts keep what you sent them.</li>
+    <li><strong>Ask us for your data:</strong> we keep no records about you, so we have nothing to show, correct or delete — apart from the connection records our temporary helper may hold until mid-November 2026; if you want to know about yours, write to us. For
+      what Number&nbsp;0 or GitHub may hold, ask them.</li>
+  </ul>
+  <p>
+    Privacy laws, such as India's Digital Personal Data Protection Act and Europe's GDPR, give you rights
+    over data an organisation holds about you. If you believe we hold any, write to <a href="mailto:wforsarthi@gmail.com">wforsarthi@gmail.com</a>
+    and we will answer.
+  </p>
+
+  <h2>Children</h2>
+  <p>
+    EchoIt is not meant for children under 13. We cannot check anyone's age, because we
+    collect nothing about you.
+  </p>
+
+  <h2 id="beta">EchoIt is a beta</h2>
+  <p>
+    Versions before 1.0.0 are test versions. They can have mistakes, including mistakes that affect privacy.
+    When we find one, we fix it and say so in the release notes.
+  </p>
+
+  <h2>Changes to this policy</h2>
+  <p>
+    If we change this policy, we will publish the new version here with a new date. If the change matters
+    to you, EchoIt will show it the next time you open the app and ask you to accept it again.
+  </p>
+
+  <footer>
+    Questions: <a href="mailto:wforsarthi@gmail.com">wforsarthi@gmail.com</a> · <a href="terms.html">Terms of Use</a> · <a href="./">EchoIt home</a>
+  </footer>
+</main>
+</body>
+</html>

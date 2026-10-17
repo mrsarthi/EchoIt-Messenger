@@ -1,0 +1,63 @@
+/* The legal pages: readable first. No web fonts or outside scripts, so reading
+   them reaches nothing but this site. */
+:root {
+  --bg: #09090b;
+  --surface: #131315;
+  --text: #e4e4e7;
+  --muted: #a1a1aa;
+  --border: rgba(63, 63, 70, 0.6);
+  --primary: #10b981;
+  --mark: rgba(250, 204, 21, 0.18);
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #fafafa;
+    --surface: #ffffff;
+    --text: #18181b;
+    --muted: #52525b;
+    --border: #e4e4e7;
+    --primary: #047857;
+    --mark: rgba(250, 204, 21, 0.35);
+    color-scheme: light;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 17px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+main { max-width: 720px; margin: 0 auto; padding: 32px 16px 64px; }
+header nav { display: flex; gap: 16px; flex-wrap: wrap; font-size: 15px; margin-bottom: 32px; }
+a { color: var(--primary); }
+h1 { font-size: 34px; line-height: 1.2; margin: 0 0 8px; }
+h2 { font-size: 22px; margin: 40px 0 8px; }
+h3 { font-size: 18px; margin: 24px 0 4px; }
+.meta { color: var(--muted); font-size: 15px; margin: 0 0 24px; }
+.short {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--primary);
+  border-radius: 8px;
+  padding: 16px 20px;
+}
+.short h2 { margin-top: 0; }
+.short ul { margin: 0; padding-left: 20px; }
+li { margin: 6px 0; }
+table { width: 100%; border-collapse: collapse; font-size: 15px; margin: 12px 0; }
+th, td { text-align: left; vertical-align: top; padding: 10px 8px; border-bottom: 1px solid var(--border); }
+th { color: var(--muted); font-weight: 600; }
+.table-wrap { overflow-x: auto; }
+mark { background: var(--mark); color: inherit; padding: 0 3px; border-radius: 3px; }
+footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--border); color: var(--muted); font-size: 15px; }
+
+/* On a phone the four-column table becomes one card per service. */
+@media (max-width: 600px) {
+  table, tbody, tr, td { display: block; width: 100%; }
+  thead { display: none; }
+  tr { border: 1px solid var(--border); border-radius: 8px; padding: 4px 12px; margin: 12px 0; background: var(--surface); }
+  td { border: none; padding: 8px 0; }
+  td::before { content: attr(data-label); display: block; color: var(--muted); font-size: 13px; font-weight: 600; }
+}

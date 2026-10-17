@@ -1,7 +1,8 @@
 # [EchoIt](https://mrsarthi.github.io/EchoIt-Messenger/) — download & user guide
 
-**A local-first, end-to-end encrypted messenger. Messages go straight from your
-device to your friend's, and no server holds your history.**
+**A local-first, end-to-end encrypted messenger. Messages go from your device to
+your friend's, sealed so only they can read them, and no server holds your
+history.** It is a free beta, for Windows and Android.
 
 This repository hosts the download page and the release builds. The application
 source lives separately.
@@ -10,12 +11,12 @@ source lives separately.
 
 ## Download
 
-Latest release: **[v0.7.0 — beta](https://github.com/mrsarthi/EchoIt-Messenger/releases/latest)**
+Latest release: **[v0.7.1 — beta](https://github.com/mrsarthi/EchoIt-Messenger/releases/latest)**
 
 | Platform | File |
 | :--- | :--- |
-| **Windows** | `EchoIt_0.7.0_x64-setup.exe` — or update from **Settings** in the app |
-| **Android** | `EchoIt_0.7.0_aarch64.apk` — 64-bit ARM, which is nearly every phone made since about 2018 |
+| **Windows** | `EchoIt_0.7.1_x64-setup.exe` — or update from **Settings** in the app |
+| **Android** | `EchoIt_0.7.1_aarch64.apk` — 64-bit ARM, which is nearly every phone made since about 2018 |
 
 On Android you will need to allow installing from an unknown source. The build
 is signed, so later updates install over the top and keep your messages.
@@ -110,28 +111,43 @@ Stated plainly, because finding out later is worse:
   something misbehaves, please say so.
 - **Someone you removed may still see you as online** while you both have
   EchoIt open.
-- **Update both sides.** Someone still on 0.6.x sees each photo or video you
-  send with a small extra picture beside it — the preview.
+- **Update before mid-November 2026.** The connection helper that EchoIt 0.7.0
+  and earlier rely on is switched off then; after that they cannot connect to
+  anyone on a different network. 0.7.1 moves to a new helper by itself.
 
 ---
 
 ## About the connection
 
-> **"Phones move around and have no fixed address, so EchoIt uses a helper to
-> introduce your device to your friend's. After that, your messages go straight
-> from your phone to theirs. If the two phones can't reach each other directly,
-> the helper passes the messages along still sealed — it cannot open them. The
-> only other server EchoIt talks to is the one it asks whether there's a new
-> version."**
+Phones move around and have no fixed address, so EchoIt uses a **connection
+helper** to introduce your device to your friend's. Usually your messages then
+go straight between the two devices. If they can't reach each other directly,
+the helper passes them along still sealed — it cannot open them, and it stores
+nothing.
 
-A helper can tell that a device is online and roughly where it is connecting
-from. It cannot read a word of what it carries, and it never holds anything.
-Files travel the same way, still sealed.
+Three services are involved, and this is everything they can see:
 
-The update check asks GitHub once a day whether a newer version is available.
-That request carries nothing about you or your conversations, though GitHub can
-see an IP address and roughly when the app was opened. You can turn it off in
-Settings and check for new versions yourself.
+| Service | What it can see | Who runs it |
+| :--- | :--- | :--- |
+| **Connection helper** | Your device's ID, its internet address, when it is online, and how much passes through it | Number 0 — until mid-November 2026, a helper we run ourselves |
+| **Address directory** | Your device's ID and which helper it uses, and your internet address when it publishes | Number 0 |
+| **Update check** | Nothing about you — like any website, your internet address and roughly when the app was opened | GitHub (you can turn it off in Settings) |
+
+None of them can read your messages. The [Privacy Policy](https://mrsarthi.github.io/EchoIt-Messenger/privacy.html)
+has the details, including what each may keep.
+
+---
+
+## Terms and privacy
+
+EchoIt asks you to agree to its terms the first time you open it. Both documents
+are short and written in plain words:
+
+- [Privacy Policy](https://mrsarthi.github.io/EchoIt-Messenger/privacy.html) — what stays on your device, what leaves it, and who can see it
+- [Terms of Use](https://mrsarthi.github.io/EchoIt-Messenger/terms.html) — what you can expect from a free beta, and what you agree to
+
+The MIT licence in this repository covers the website's own code only. The
+EchoIt app is not open source.
 
 ---
 
