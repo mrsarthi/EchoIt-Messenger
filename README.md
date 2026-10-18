@@ -160,7 +160,13 @@ phrase, that identity is gone.
 
 ---
 
-## Reporting problems
+## Reporting problems and talking to the developer
+
+EchoIt is built by one person. Message me on
+[Telegram (@quazarLover)](https://t.me/quazarLover) or
+[Discord](https://discord.com/users/1299817148243251281), follow
+[@echo.1t](https://www.instagram.com/echo.1t/) on Instagram, or email
+wforsarthi@gmail.com. You can also open an issue in this repository.
 
 Please include what you did, what you expected, and what happened. If a message
 or file did not arrive, say whether **both apps were open at the time** — that

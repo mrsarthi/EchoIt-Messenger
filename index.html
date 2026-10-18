@@ -53,14 +53,14 @@
     <!-- Styles and fonts are served from this site only: nothing is loaded
          from anyone else (see privacy.html, "This website"). -->
     <link rel="preload" href="fonts/geist.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="site.css?v=071d">
+    <link rel="stylesheet" href="site.css?v=071e">
     <!-- New names on purpose: browsers keep a favicon by URL for a long
          time, and replacing echoit-logo.png in place left the old icon showing. -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
     <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="stylesheet" href="index.css?v=071d">
+    <link rel="stylesheet" href="index.css?v=071e">
     
     
     <!-- Scripts -->
@@ -90,6 +90,7 @@
                 <a id="link-preview" class="text-zinc-muted font-medium hover:text-primary transition-colors duration-200 font-mono text-xs uppercase tracking-wider" href="#preview">Preview</a>
                 <a id="link-protocol" class="text-zinc-muted font-medium hover:text-primary transition-colors duration-200 font-mono text-xs uppercase tracking-wider" href="#protocol">How it works</a>
                 <a class="text-zinc-muted font-medium hover:text-primary transition-colors duration-200 font-mono text-xs uppercase tracking-wider" href="#faq">FAQ</a>
+                <a class="text-zinc-muted font-medium hover:text-primary transition-colors duration-200 font-mono text-xs uppercase tracking-wider" href="#connect">Contact</a>
             </div>
         </div>
     </nav>
@@ -460,6 +461,10 @@
                         <summary>Is EchoIt open source?</summary>
                         <p>Its engine, <a href="#protocol">Dicsussion</a>, is: anyone can read it on GitHub. The EchoIt app itself is not.</p>
                     </details>
+                    <details class="faq-item">
+                        <summary>How do I reach the developer?</summary>
+                        <p>Message me on <a href="https://t.me/quazarLover">Telegram (@quazarLover)</a> or <a href="https://discord.com/users/1299817148243251281">Discord</a>, follow <a href="https://www.instagram.com/echo.1t/">@echo.1t</a> on Instagram, or email <a href="mailto:wforsarthi@gmail.com">wforsarthi@gmail.com</a>.</p>
+                    </details>
                 </div>
             </section>
 
@@ -474,11 +479,13 @@
                         <h2 class="font-heading text-2xl font-bold text-white">You're early. Help shape it.</h2>
                         <p class="font-body text-zinc-muted text-sm leading-relaxed mt-3">
                             EchoIt is a beta, and the people using it now decide what it becomes. If something breaks,
-                            confuses you, or you wish it did something it doesn't, tell us &mdash; every report is read.
+                            confuses you, or you wish it did something it doesn't, message me &mdash; every report is read. You can also
+                            <a class="text-primary hover:underline" href="https://github.com/mrsarthi/EchoIt-Messenger/issues/new">report a problem on GitHub</a>.
                         </p>
                         <div class="flex flex-col sm:flex-row gap-3 mt-6">
-                            <a href="mailto:wforsarthi@gmail.com?subject=EchoIt%20beta%20feedback" class="btn btn-primary justify-center ripple-btn">Send feedback</a>
-                            <a href="https://github.com/mrsarthi/EchoIt-Messenger/issues/new" class="btn btn-secondary justify-center">Report a problem on GitHub</a>
+                            <a href="https://t.me/quazarLover" target="_blank" rel="noopener noreferrer" class="btn btn-primary justify-center ripple-btn">Message me on Telegram</a>
+                            <a href="https://discord.com/users/1299817148243251281" target="_blank" rel="noopener noreferrer" class="btn btn-secondary justify-center">Message me on Discord</a>
+                            
                         </div>
                         <p class="font-body text-xs text-zinc-muted mt-4">If a message or file didn't arrive, say whether both apps were open at the time &mdash; that one detail helps most.</p>
                     </article>
@@ -497,6 +504,47 @@
                         </ul>
                         <a href="https://github.com/mrsarthi/EchoIt-Messenger/releases" class="inline-block mt-4 font-mono text-xs text-primary hover:underline">All release notes &rarr;</a>
                     </article>
+                </div>
+            </section>
+
+            <!-- Talk to the developer: where people can reach the person building EchoIt -->
+            <section id="connect" class="scroll-animate mb-12">
+                <div class="max-w-[1000px] mx-auto text-center">
+                    <h2 class="font-heading text-4xl font-bold text-white mb-2 scroll-animate">Talk to the developer</h2>
+                    <p class="font-body text-zinc-muted max-w-xl mx-auto mb-10">
+                        EchoIt is built by one person. Questions, ideas, something that broke &mdash; message me directly.
+                        I read everything.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-left">
+                        <a class="feature-card connect-card" href="https://t.me/quazarLover" target="_blank" rel="noopener noreferrer">
+                            <span class="connect-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4 20-7z"/></svg>
+                            </span>
+                            <span class="font-heading text-lg font-bold text-white">Telegram</span>
+                            <span class="font-mono text-xs text-zinc-muted">@quazarLover</span>
+                            <span class="font-body text-xs text-zinc-muted mt-1">Message me for feedback or help</span>
+                        </a>
+                        <a class="feature-card connect-card" href="https://discord.com/users/1299817148243251281" target="_blank" rel="noopener noreferrer">
+                            <span class="connect-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a8 8 0 0 1-8 8H7l-4 3V12a8 8 0 0 1 8-8h2a8 8 0 0 1 8 8z"/><circle cx="9" cy="12" r="1"/><circle cx="15" cy="12" r="1"/></svg>
+                            </span>
+                            <span class="font-heading text-lg font-bold text-white">Discord</span>
+                            <span class="font-mono text-xs text-zinc-muted">Send me a DM</span>
+                            <span class="font-body text-xs text-zinc-muted mt-1">Opens my profile in Discord</span>
+                        </a>
+                        <a class="feature-card connect-card" href="https://www.instagram.com/echo.1t/" target="_blank" rel="noopener noreferrer">
+                            <span class="connect-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/></svg>
+                            </span>
+                            <span class="font-heading text-lg font-bold text-white">Instagram</span>
+                            <span class="font-mono text-xs text-zinc-muted">@echo.1t</span>
+                            <span class="font-body text-xs text-zinc-muted mt-1">Follow along as EchoIt is built</span>
+                        </a>
+                    </div>
+                    <p class="font-body text-xs text-zinc-muted mt-6">
+                        Prefer email? <a class="text-primary hover:underline" href="mailto:wforsarthi@gmail.com">wforsarthi@gmail.com</a>.
+                        Messages on Telegram, Discord or Instagram go through those services, under their own privacy policies.
+                    </p>
                 </div>
             </section>
 
@@ -536,6 +584,7 @@
             </div>
             
             <div class="flex flex-wrap justify-center gap-x-8 gap-y-4">
+                <a class="font-mono text-xs text-zinc-muted hover:text-on-surface transition-colors uppercase tracking-wider" href="#connect">Contact</a>
                 <a class="font-mono text-xs text-zinc-muted hover:text-on-surface transition-colors uppercase tracking-wider" href="privacy.html">Privacy Policy</a>
                 <a class="font-mono text-xs text-zinc-muted hover:text-on-surface transition-colors uppercase tracking-wider" href="terms.html">Terms of Use</a>
                 <a class="font-mono text-xs text-zinc-muted hover:text-on-surface transition-colors uppercase tracking-wider" href="https://github.com/mrsarthi/EchoIt-Messenger">Repository</a>
